@@ -43,6 +43,9 @@ class Program
                     break;
                 case "4":
                     return;
+                default:
+                    Console.WriteLine("Неверный пункт меню.");
+                    break;
 
             }
         }
