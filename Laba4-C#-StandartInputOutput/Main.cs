@@ -26,6 +26,23 @@ class Program
                     editor.Content = Console.ReadLine();
                     Console.WriteLine("Текст изменен.");
                     break;
+                case "2":
+                    Console.WriteLine($"Текст: {editor.Content}");
+                    break;
+                case "3":
+                    var memento = history.Undo();
+                    if(memento != null)
+                    {
+                        editor.Restore(memento);
+                        Console.WriteLine("Изменение отменено.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("История пуста.");
+                    }
+                    break;
+                case "4":
+                    return;
 
             }
         }
